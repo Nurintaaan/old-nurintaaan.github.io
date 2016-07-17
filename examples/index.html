@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<!--Standart Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
+
+        <!-- Site Properties -->
+        <title>It's Me - NurIntanAlatas</title>
+		 <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+ 		 <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+ 		 <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+		 <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+		 <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+		 <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+		 <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+		<link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
+		
+		 <link rel="stylesheet" type="text/css" href="../dist/semantic.css">
+
+		<style type="text/css">
+			  .hidden.menu {
+				  display: none;
+				}
+
+				.masthead.segment {
+				  min-height: 700px;
+				  padding: 1em 0em;
+				}
+				.masthead .logo.item img {
+				  margin-right: 1em;
+				}
+				.masthead .ui.menu .ui.button {
+				  margin-left: 0.5em;
+				}
+				.masthead h1.ui.header {
+				  margin-top: 0.5em;
+				  margin-bottom: 0em;
+				  font-size: 4em;
+				  font-weight: normal;
+				}
+				.masthead h2 {
+				  font-size: 1.7em;
+				  font-weight: normal;
+				}
+				
+				#doubleDown{
+				  color: #87D37C;
+				  font-size: 75px;
+				}
+
+				.ui.right.aligned.header{
+					font-size: 3em;
+				}
+		
+				.ui.vertical.stripe {
+				  min-height: 700px;
+				  padding: 8em 0em;
+				}
+				.ui.vertical.stripe h3 {
+				  font-size: 2em;
+				}
+				.ui.vertical.stripe .button + h3,
+				.ui.vertical.stripe p + h3 {
+				  margin-top: 3em;
+				}
+				.ui.vertical.stripe .floated.image {
+				  clear: both;
+				}
+				.ui.vertical.stripe p {
+				  font-size: 1.33em;
+				}
+				.ui.vertical.stripe .horizontal.divider {
+				  margin: 3em 0em;
+				}
+
+				.quote.stripe.segment {
+				  padding: 0em;
+				}
+				.quote.stripe.segment .grid .column {
+				  padding-top: 5em;
+				  padding-bottom: 5em;
+				}
+
+				.footer.segment {
+				  padding: 5em 0em;
+				}
+
+				.secondary.pointing.menu .toc.item {
+				  display: none;
+				}
+				
+				.ui.huge.header{
+					font-size: 75px;
+					padding-top: 30px;
+				}
+				
+				#logo {
+					font-size: 100px;
+				}
+				#logo a{
+					color: black;
+				}
+
+
+				@media only screen and (max-width: 700px) {
+				  .ui.fixed.menu {
+				    display: none !important;
+				  }
+				  .secondary.pointing.menu .item,
+				  .secondary.pointing.menu .menu {
+				    display: none;
+				  }
+				  .secondary.pointing.menu .toc.item {
+				    display: block;
+				  }
+				  .masthead.segment {
+				    min-height: 350px;
+				  }
+				  .masthead h1.ui.header {
+				    font-size: 2em;
+				    margin-top: 1.5em;
+				  }
+				  .masthead h2 {
+				    margin-top: 0.5em;
+				    font-size: 1.5em;
+				  }
+
+
+		</style>
+	
+
+		<script src="assets/library/jquery.min.js"></script>
+		<script src="../dist/components/visibility.js"></script>
+		<script src="../dist/components/sidebar.js"></script>
+		<script src="../dist/components/transition.js"></script>
+		
+		<script src="https://use.fontawesome.com/e10cd9271c.js"></script>
+
+		<script>
+		  $(document)
+		    .ready(function() {
+
+		      // fix menu when passed
+		      $('.masthead')
+		        .visibility({
+		          once: false,
+		          onBottomPassed: function() {
+		            $('.fixed.menu').transition('fade in');
+		          },
+		          onBottomPassedReverse: function() {
+		            $('.fixed.menu').transition('fade out');
+		          }
+		        })
+		      ;
+
+		      // create sidebar and attach to menu open
+		      $('.ui.sidebar')
+		        .sidebar('attach events', '.toc.item')
+		      ;
+
+		    })
+		  ;
+		</script>
+
+    </head>
+
+    <body>
+    <!-- Following Menu -->
+    <div class = "ui large top fixed hidden menu">
+		<div class="ui container">
+		    <a class="active item" href="#Home">Home</a>
+		    <a class="item" href="#Me">Me</a>
+		    <a class="item" href="#Experience">Experience</a>
+		    <a class="item" href="#ContactMe">Contact Me</a>
+		</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+
+
+    <!-- Page Contents -->
+	<div class="pusher">
+		<div class="ui inverted vertical masthead center aligned segment">
+		
+			<div class="ui container" id="Home">
+				<div class="ui large secondary inverted pointing menu">
+					<a class="toc item">
+			          <i class="sidebar icon"></i>
+			        </a>
+			        <a class="active item" href="#Home">Home</a>
+				    <a class="item" href="#Me">Me</a>
+				    <a class="item" href="#Experience">Experience</a>
+				    <a class="item" href="#ContactMe">Contact Me</a>
+				</div>
+			</div>
+
+			<div class="ui text container" >
+				<h1 class="ui inverted header">
+					Hello World!
+				</h1>
+				<h2>My Name is Nur Intan Alatas</h2>
+				<img class= "ui centered medium image"src="../images/Diamond_Stone.PNG">
+
+				<i class="fa fa-angle-double-down" id="doubleDown" aria-hidden="true" href="#Me"></i>
+
+			</div>
+
+		</div>
+		
+		<div class="ui vertical stripe segment " id="Me">
+			<div class="ui text container">
+				<div class="ui dividing header">
+					<h1 class="ui right aligned header"> Who Am I ? </h1>
+				</div>
+				<div class="ui grid">
+					<div class="six wide column" >
+						<img src="../images/intan.jpg" class="ui medium circular image">
+					</div>
+					<div class="ten wide column">
+						<div class="ui text container">
+							<h2 style="color : green"> Energic|Caring|Ambitious|Hardworker|Coding Enthusiast</h2>
+							<h1> <i class="fa fa-diamond" aria-hidden="true"></i> And I'm Diamond <i class="fa fa-diamond" aria-hidden="true"></i></h1>
+							<div class="ui grid">
+								<div class="eight wide column">
+									<br>
+									<p>	Diamond? Yes I am. I'm just a carbon, but with pressure it's make me brighter. I have a buddy it's called "My lovely Laptop" with external keyboard above it, I always code with this amazing laptop ! </p>
+								</div>
+								<div class="eight wide column">
+									<img src="../images/laptop.PNG" class="ui medium image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+
+		<div class="ui inverted vertical stripe segment" id ="Experience">
+				<div class="ui equal width stackable internally celled grid">
+					<div class="center aligned row">
+				        <div class="column">
+				          <h3>Experience</h3>
+				          <p>A LOT experience and organizaion i wanna tell you ! but here is it a little for you!
+				          <br><br>
+				         	My first organization is Rohani Islam or also called as "Rohis" at my junior high school, and rohis taught me about leadership and project management then i when i'm at Senior high School i entered C.O.S.S or Club or Science and Social, at this time i learn how to teach people and how to competite with other then when i'm at college in Pengmas BEM Fasilkom UI i learn how to sharing with people and how precious life i have.</p>
+				        </div>
+				        <div class="column">
+				          <h3>Education</h3>
+				          <p>
+				            <div class="ui small images">
+							  <img src="../images/SD.png">
+							  <img src="../images/SMP.png">
+							  <img src="../images/SMA.png">
+							  <img src="../images/UI.png">
+							</div>
+				            <br>Education for me is like breathing, you will need it until die. I started my elementary school in 2003 at Depok Baru 7 and graduated 2009. Then, I started my junior high school 2009 and graduated in 2012 then i got my Senior highSchool then graduated in 2015. And I'm so proud cause i can take Computer Science major in Universitas of Indonesia.
+
+				          </p>
+				        </div>
+				     </div>
+				</div>
+		</div>
+
+		<div class="ui vertical stripe segment" id ="ContactMe">
+			<div class="ui text center aligned container">
+				<div class="ui huge header">Interest ?</div>
+				<div class="ui small header">Want to know me more ? Contact me!</div>
+				<div class="ui grid" id="logo">
+					<div class="four wide column">
+						<a href="https://www.facebook.com/Nurintanalatas" class="fa fa-facebook-square" aria-hidden="true"></a>
+					</div>
+					<div class="four wide column">
+						<a href="https://www.instagram.com/nurintaaan/" class="fa fa-instagram" aria-hidden="true"></a>
+					</div>
+					<div class="four wide column">
+						<a href="https://github.com/nurintaaan" class="fa fa-github" aria-hidden="true"></a>
+					</div>
+					<div class="four wide column">
+						<a href="https://id.linkedin.com/in/nur-intan-alatas-6671b09b" class="fa fa-linkedin-square" aria-hidden="true"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+    </body>
+</html>
