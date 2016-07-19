@@ -112,7 +112,6 @@
 					color: black;
 				}
 
-
 				@media only screen and (max-width: 700px) {
 				  .ui.fixed.menu {
 				    display: none !important;
@@ -173,6 +172,8 @@
 		  ;
 		</script>
 
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>
     </head>
 
     <body>
@@ -209,7 +210,8 @@
 				<h1 class="ui inverted header">
 					Hello World!
 				</h1>
-				<h2>My Name is Nur Intan Alatas</h2>
+				<h2 class="element-typed">My Name is Nur Intan Alatas</h2>
+				<span class="element" ></span>
 				<img class= "ui centered medium image"src="images/Diamond_Light.png">
 				<a href="#Me"><i class="fa fa-angle-double-down" id="doubleDown" aria-hidden="true"></i></a>
 
@@ -284,6 +286,20 @@
 
 
 	</div>
-
+	<script>
+		$('.element').typeIt({
+		     speed: 50,
+		     autoStart: false
+		})
+		.tiType('This is so AweSIMS')
+		.tiPause(500)
+		.tiDelete(4)
+		.tiType('some')
+		.tiPause(1000)
+		.tiDelete()
+		.tiType('ooh wait... Hello, welcome to my website!')
+		.tiBreak() .tiPause(750)
+		.tiType(' Enjoy !')
+	</script>
     </body>
 </html>
